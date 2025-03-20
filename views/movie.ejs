@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= movie.Title %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+    .search-form {
+      margin-bottom: 20px;
+    }
+    .search-form input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+    }
+    .search-form button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Search Form -->
+    <form class="search-form" action="/omdbApi/list-movies" method="get">
+      <input type="text" name="t" placeholder="Search for a movie..." value="<%= movie.Title %>">
+      <button type="submit"><i class="fa fa-search"></i> Search</button>
+    </form>
+
+    <!-- Movie Details -->
+    <h1><%= movie.Title %> (<%= movie.Year %>)</h1>
+    <img src="<%= movie.Poster %>" alt="<%= movie.Title %> Poster">
+    <p><strong>Genre:</strong> <%= movie.Genre %></p>
+    <p><strong>Director:</strong> <%= movie.Director %></p>
+    <p><strong>Plot:</strong> <%= movie.Plot %></p>
+    <p><strong>Actors:</strong> <%= movie.Actors %></p>
+    <p><strong>IMDB Rating:</strong> <%= movie.imdbRating %></p>
+    <p><strong>Awards:</strong> <%= movie.Awards %></p>
+  </div>
+</body>
+</html>

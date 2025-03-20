@@ -1,0 +1,20 @@
+{
+  "name": "node_js_project_setup",
+  "version": "1.0.0",
+  "description": "Preparing a boilerplate for node js project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Kundan Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mysql2": "^3.14.0",
+    "request-promise": "^4.2.6",
+    "sequelize": "^6.37.6"
+  }
+}
