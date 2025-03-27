@@ -1,5 +1,5 @@
 var request = require('request-promise');
-
+const { user }= require('../models')
 exports.listMovies = async (req, res) =>{
     try {
         const { search } = req.query
