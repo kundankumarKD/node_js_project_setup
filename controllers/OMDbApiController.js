@@ -1,7 +1,11 @@
 var request = require('request-promise');
-const { user }= require('../models')
+const { Product }= require('../models')
 exports.listMovies = async (req, res) =>{
     try {
+        let getProductsData = await Product.findOne({attributes : ['*'], raw: false})
+        
+        console.log(getProductsData)
+        return
         const { search } = req.query
         let getMovies = await getMoviewApiCall(search)
         console.log("Incoming request", getMovies)
