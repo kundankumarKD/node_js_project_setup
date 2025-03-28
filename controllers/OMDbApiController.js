@@ -2,7 +2,7 @@ var request = require('request-promise');
 const { Product }= require('../models')
 exports.listMovies = async (req, res) =>{
     try {
-        let getProductsData = await Product.findOne({attributes : ['*'], raw: false})
+        let getProductsData = await Product.findOne({attributes : ['*'], raw: true})
         
         console.log(getProductsData)
         return
