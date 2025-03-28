@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
-const sequelize = require('../config/database');
+const sequelize = require('../configs/database.js');
 
 const db = {};
 
@@ -9,7 +9,6 @@ const db = {};
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-
-db.user = require("./user.model.js").master(sequelize, Sequelize.DataTypes);
+db.Product = require("./product.model.js")(sequelize, Sequelize.DataTypes);
 
 module.exports = db;
