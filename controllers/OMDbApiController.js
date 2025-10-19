@@ -35,5 +35,5 @@ const getMoviewApiCall = async (search) => {
 }
 
 exports.testConnection = async(req, res) =>{
-    return res.send.json({status: "success", message: "Server connected successfully"})
+    return res.json({status: "success", message: "Server connected successfully"})
 }
