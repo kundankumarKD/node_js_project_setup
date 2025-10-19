@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 const indexRoute = require('./routes/index.js').Router
-const PORT = 8080
+const PORT = 8000
 
 const bodyParser = require('body-parser')
 app.use(express.static('views'));
