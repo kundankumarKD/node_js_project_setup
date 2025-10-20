@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 
 const indexRoute = require('./routes/index.js').Router
-const PORT = 8000
+require('dotenv').config();
+const PORT = process?.env?.PORT ? process?.env?.PORT : 8000
 
 const bodyParser = require('body-parser')
 app.use(express.static('views'));
